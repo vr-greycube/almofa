@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include almofa *.css
+recursive-include almofa *.csv
+recursive-include almofa *.html
+recursive-include almofa *.ico
+recursive-include almofa *.js
+recursive-include almofa *.json
+recursive-include almofa *.md
+recursive-include almofa *.png
+recursive-include almofa *.py
+recursive-include almofa *.svg
+recursive-include almofa *.txt
+recursive-exclude almofa *.pyc

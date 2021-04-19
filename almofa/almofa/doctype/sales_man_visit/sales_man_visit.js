@@ -75,13 +75,14 @@ async function get_user_location() {
     }
 
     // return client location for local test. Uncomment in production
-    resolve(
-      cur_frm.doc.client_location.split(",").map((r) => parseFloat(r) - 1.001)
-    );
-    return;
+    // resolve(
+    //   cur_frm.doc.client_location.split(",").map((r) => parseFloat(r) - 1.001)
+    // );
+    // return;
     //
     navigator.geolocation.getCurrentPosition(
       (loc) => {
+        console.log([loc.coords.latitude, loc.coords.longitude]);
         resolve([loc.coords.latitude, loc.coords.longitude]);
       },
       (err) => {

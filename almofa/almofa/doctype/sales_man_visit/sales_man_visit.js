@@ -2,6 +2,10 @@
 // For license information, please see license.txt
 
 frappe.ui.form.on("Sales Man Visit", {
+  refresh: function (frm) {
+    frm.trigger("set_dynamic_field_label");
+  },
+
   setup: function (frm) {
     frm.set_query("visit_to", function () {
       return {
@@ -14,6 +18,7 @@ frappe.ui.form.on("Sales Man Visit", {
 
   visit_to: function (frm) {
     frm.set_value("party", "");
+    frm.trigger("set_dynamic_field_label");
   },
 
   party: function (frm) {
@@ -31,13 +36,14 @@ frappe.ui.form.on("Sales Man Visit", {
     }
   },
 
-  setup_opportunity_from: function (frm) {
-    frm.trigger("setup_queries");
-    frm.trigger("set_dynamic_field_label");
+  set_dynamic_field_label: function (frm) {
+    if (frm.doc.visit_to) {
+      frm.set_df_property("party", "label", frm.doc.visit_to);
+    }
   },
 
   validate: function (frm) {
-    if (!frm.doc.visit_to == "Customer") {
+    if (!frm.doc.visit_to == "Customer" || frm.doc.status != "Closed") {
       return true;
     }
     return new Promise((resolve, reject) => {

@@ -53,13 +53,13 @@ frappe.ui.form.on("Sales Man Visit", {
           .map((r) => parseFloat(r));
 
         let distance = haversineDistance(client_loc, user_loc) * 1000;
-        if (distance < 250) {
-          resolve();
-        } else {
+        if (distance > 100) {
           frappe.throw(
             `User location error. User is ${distance.toFixed()}m away from client's location.`
           );
           reject();
+        } else {
+          resolve();
         }
       });
     });

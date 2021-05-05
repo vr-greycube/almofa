@@ -39,7 +39,7 @@ app_license = "MIT"
 
 # website user home page (by Role)
 # role_home_page = {
-#	"Role": "home_page"
+# 	"Role": "home_page"
 # }
 
 # Website user home page (by function)
@@ -56,6 +56,8 @@ app_license = "MIT"
 
 # before_install = "almofa.install.before_install"
 # after_install = "almofa.install.after_install"
+after_migrate = "almofa.hooks_controller.after_migrate"
+
 
 # Desk Notifications
 # ------------------
@@ -84,7 +86,7 @@ app_license = "MIT"
 # 		"on_update": "method",
 # 		"on_cancel": "method",
 # 		"on_trash": "method"
-#	}
+# 	}
 # }
 
 # Scheduled Tasks
@@ -126,4 +128,3 @@ app_license = "MIT"
 # override_doctype_dashboards = {
 # 	"Task": "almofa.task.get_dashboard_data"
 # }
-

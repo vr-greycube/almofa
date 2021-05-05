@@ -1,168 +1,162 @@
 {
- "autoname": "naming_series:",
- "creation": "2021-04-17 08:20:14.258298",
- "doctype": "DocType",
- "editable_grid": 1,
- "engine": "InnoDB",
- "field_order": [
-  "naming_series",
-  "visit_before",
-  "visit_to",
-  "party",
-  "customer_name",
-  "client_location",
-  "cb_1",
-  "status",
-  "visit_type",
-  "sales_partner",
-  "user_location",
-  "sb_1",
-  "remarks"
- ],
- "fields": [
-  {
-   "fieldname": "naming_series",
-   "fieldtype": "Select",
-   "label": "Series",
-   "options": "SMV.-.YY.MM.DD.-.#",
-   "reqd": 1
-  },
-  {
-   "fieldname": "visit_before",
-   "fieldtype": "Datetime",
-   "label": "Visit Before",
-   "reqd": 1,
-   "set_only_once": 1
-  },
-  {
-   "fieldname": "visit_to",
-   "fieldtype": "Link",
-   "in_standard_filter": 1,
-   "label": "Visit To",
-   "options": "DocType",
-   "reqd": 1
-  },
-  {
-   "fieldname": "party",
-   "fieldtype": "Dynamic Link",
-   "in_list_view": 1,
-   "in_standard_filter": 1,
-   "label": "Party",
-   "options": "visit_to"
-  },
-  {
-   "fieldname": "customer_name",
-   "fieldtype": "Data",
-   "label": "Customer / Lead Name",
-   "read_only": 1
-  },
-  {
-   "fieldname": "client_location",
-   "fieldtype": "Data",
-   "label": "Client Location"
-  },
-  {
-   "fieldname": "cb_1",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "status",
-   "fieldtype": "Select",
-   "in_list_view": 1,
-   "in_standard_filter": 1,
-   "label": "Status",
-   "options": "Open\nClosed",
-   "reqd": 1
-  },
-  {
-   "fieldname": "visit_type",
-   "fieldtype": "Select",
-   "in_list_view": 1,
-   "in_standard_filter": 1,
-   "label": "Visit Type",
-   "options": "Old Customer\nNew Customer",
-   "reqd": 1
-  },
-  {
-   "fieldname": "sales_partner",
-   "fieldtype": "Link",
-   "in_list_view": 1,
-   "in_standard_filter": 1,
-   "label": "Sales Partner",
-   "options": "Sales Partner",
-   "reqd": 1
-  },
-  {
-   "fieldname": "user_location",
-   "fieldtype": "Data",
-   "label": "User Location"
-  },
-  {
-   "fieldname": "sb_1",
-   "fieldtype": "Section Break"
-  },
-  {
-   "fieldname": "remarks",
-   "fieldtype": "Small Text",
-   "label": "Remarks"
-  }
- ],
- "modified": "2021-04-17 08:31:55.132969",
- "modified_by": "Administrator",
- "module": "Almofa",
- "name": "Sales Man Visit",
- "owner": "Administrator",
- "permissions": [
-  {
-   "create": 1,
-   "delete": 1,
-   "email": 1,
-   "export": 1,
-   "print": 1,
-   "read": 1,
-   "report": 1,
-   "role": "System Manager",
-   "share": 1,
-   "write": 1
-  },
-  {
-   "create": 1,
-   "delete": 1,
-   "email": 1,
-   "export": 1,
-   "print": 1,
-   "read": 1,
-   "report": 1,
-   "role": "Sales User",
-   "share": 1,
-   "write": 1
-  },
-  {
-   "create": 1,
-   "delete": 1,
-   "email": 1,
-   "export": 1,
-   "print": 1,
-   "read": 1,
-   "report": 1,
-   "role": "Sales Manager",
-   "share": 1,
-   "write": 1
-  },
-  {
-   "create": 1,
-   "delete": 1,
-   "email": 1,
-   "export": 1,
-   "print": 1,
-   "read": 1,
-   "report": 1,
-   "role": "Sales Master Manager",
-   "share": 1,
-   "write": 1
-  }
- ],
- "sort_field": "modified",
- "sort_order": "DESC",
- "track_changes": 1
+  "autoname": "naming_series:",
+  "creation": "2021-04-17 08:20:14.258298",
+  "doctype": "DocType",
+  "editable_grid": 1,
+  "engine": "InnoDB",
+  "field_order": [
+    "naming_series",
+    "visit_before",
+    "visit_to",
+    "party",
+    "customer_name",
+    "client_location",
+    "cb_1",
+    "status",
+    "visit_type",
+    "sales_partner",
+    "sb_1",
+    "remarks"
+  ],
+  "fields": [
+    {
+      "fieldname": "naming_series",
+      "fieldtype": "Select",
+      "label": "Series",
+      "options": "SMV.-.YY.MM.DD.-.#",
+      "reqd": 1
+    },
+    {
+      "fieldname": "visit_before",
+      "fieldtype": "Datetime",
+      "label": "Visit Before",
+      "reqd": 1,
+      "set_only_once": 1
+    },
+    {
+      "fieldname": "visit_to",
+      "fieldtype": "Link",
+      "in_standard_filter": 1,
+      "label": "Visit To",
+      "options": "DocType",
+      "reqd": 1
+    },
+    {
+      "fieldname": "party",
+      "fieldtype": "Dynamic Link",
+      "in_list_view": 1,
+      "in_standard_filter": 1,
+      "label": "Party",
+      "options": "visit_to"
+    },
+    {
+      "fieldname": "customer_name",
+      "fieldtype": "Data",
+      "label": "Customer / Lead Name",
+      "read_only": 1
+    },
+    {
+      "fieldname": "client_location",
+      "fieldtype": "Data",
+      "label": "Client Location"
+    },
+    {
+      "fieldname": "cb_1",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "in_list_view": 1,
+      "in_standard_filter": 1,
+      "label": "Status",
+      "options": "Open\nClosed",
+      "reqd": 1
+    },
+    {
+      "fieldname": "visit_type",
+      "fieldtype": "Select",
+      "in_list_view": 1,
+      "in_standard_filter": 1,
+      "label": "Visit Type",
+      "options": "Old Customer\nNew Customer",
+      "reqd": 1
+    },
+    {
+      "fieldname": "sales_partner",
+      "fieldtype": "Link",
+      "in_list_view": 1,
+      "in_standard_filter": 1,
+      "label": "Sales Partner",
+      "options": "Sales Partner",
+      "reqd": 1
+    },
+    {
+      "fieldname": "sb_1",
+      "fieldtype": "Section Break"
+    },
+    {
+      "fieldname": "remarks",
+      "fieldtype": "Small Text",
+      "label": "Remarks"
+    }
+  ],
+  "modified": "2021-05-05 08:31:55.132969",
+  "modified_by": "Administrator",
+  "module": "Almofa",
+  "name": "Sales Man Visit",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "create": 1,
+      "delete": 1,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "System Manager",
+      "share": 1,
+      "write": 1
+    },
+    {
+      "create": 1,
+      "delete": 1,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "Sales User",
+      "share": 1,
+      "write": 1
+    },
+    {
+      "create": 1,
+      "delete": 1,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "Sales Manager",
+      "share": 1,
+      "write": 1
+    },
+    {
+      "create": 1,
+      "delete": 1,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "Sales Master Manager",
+      "share": 1,
+      "write": 1
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "track_changes": 1
 }

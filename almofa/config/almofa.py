@@ -15,5 +15,16 @@ def get_data():
                 },
             ],
         },
+        {
+            "label": _("Reports"),
+            "items": [
+                {
+                    "type": "report",
+                    "name": "Almofa Net Profit",
+                    "description": _("Almofa Net Profit"),
+                    "is_query_report": True,
+                },
+            ],
+        },
     ]
     return config
